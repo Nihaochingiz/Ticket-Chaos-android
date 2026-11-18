@@ -9,6 +9,10 @@ void main() {
     );
   });
 
+  test('expanded story contains at least 24 scenes', () {
+    expect(scenes.length, greaterThanOrEqualTo(24));
+  });
+
   test('every choice points to an existing scene', () {
     for (final scene in scenes.values) {
       for (final choice in scene.choices) {
